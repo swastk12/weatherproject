@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const hbs = require("hbs")
 const app = express()
+const port = process.env.PORT || 3000;
 
 const public = path.join(__dirname, "../public");
 const template_path =path.join(__dirname, "../template/views");
@@ -28,6 +29,6 @@ res.render('404error' , {
 })
 })
 
-app.listen("3000",()=>{
+app.listen(port ,()=>{
 console.log("successfull port");
 })
